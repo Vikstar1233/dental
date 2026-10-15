@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --porcelain: #f4f6f5;
+  --surface: #ffffff;
+  --ink: #10221d;
+  --muted: #5c6e68;
+  --line: #dee6e2;
+  --teal: #146b5e;
+  --teal-deep: #0b3b33;
+  --teal-soft: #e1f0ec;
+  --coral: #e2694a;
+  --coral-soft: #fbe3da;
+  --warn: #92590a;
+  --warn-soft: #fbeed9;
+  --danger: #b3413a;
+  --danger-soft: #fbe4e2;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-porcelain: var(--porcelain);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-teal: var(--teal);
+  --color-teal-deep: var(--teal-deep);
+  --color-teal-soft: var(--teal-soft);
+  --color-coral: var(--coral);
+  --color-coral-soft: var(--coral-soft);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-data: var(--font-data);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --porcelain: #0d1613;
+    --surface: #1a2f29;
+    --ink: #e9f2ef;
+    --muted: #93a69f;
+    --line: #24352f;
+    --teal: #52bba9;
+    --teal-deep: #08201b;
+    --teal-soft: #16302a;
+    --coral: #f0916f;
+    --coral-soft: #2c1d16;
+    --warn: #e3b567;
+    --warn-soft: #2c2312;
+    --danger: #e2887f;
+    --danger-soft: #2f1a17;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--porcelain);
+  color: var(--ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  text-wrap: balance;
+}
+
+.font-data {
+  font-family: var(--font-data), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
 }
